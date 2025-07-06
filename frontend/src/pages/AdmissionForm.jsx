@@ -31,7 +31,7 @@ const AdmissionForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5002/api/admission/submit", formData);
+     await axios.post(`${import.meta.env.VITE_API_URL}/submit`, formData);
       alert("Form submitted successfully!");
     } catch (error) {
       console.error(error);
