@@ -19,7 +19,28 @@ const admissionSchema = new mongoose.Schema({
   province: String,
   gpa: String,
   symbolNo: String,
-  schoolType: String
+  schoolType: String,
+
+  // 🆕 Guardian Declaration & Additional Fields
+  guardianEmail: String,
+  guardianMobile: String,
+  date: String,
+
+  // 🆕 File uploads (store as Buffer or use file path if using multer with disk storage)
+  ppPhoto: Buffer,
+  citizenship: Buffer,
+  signature: Buffer,
+  guardianSignature: Buffer,
+
+  // 🆕 Checklist fields
+  checklist: {
+    admitCard: Boolean,
+    gradesheet: Boolean,
+    birthCertificate: Boolean,
+    photos: Boolean,
+    citizenshipPhoto: Boolean,
+    otherDocs: Boolean
+  }
 });
 
 export default mongoose.model('Admission', admissionSchema);
