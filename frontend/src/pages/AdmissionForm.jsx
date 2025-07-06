@@ -81,6 +81,8 @@ const AdmissionForm = () => {
 
       await axios.post(`${import.meta.env.VITE_API_URL}/submit`, submitData);
       alert('Form submitted successfully!');
+      console.log("✅ API URL being used:", import.meta.env.VITE_API_URL);
+
 
     } catch (error) {
       console.error(error);
