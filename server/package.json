@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "type": "module",
+  "script":{
+    "start":"server.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.0.1",
